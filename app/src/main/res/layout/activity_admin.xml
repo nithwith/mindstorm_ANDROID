@@ -7,43 +7,11 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="13dp"
-        android:text="Luminaire"
+        android:layout_width="116dp"
+        android:layout_height="27dp"
+        android:text="Vos temporalités"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="60dp" />
-
-    <Switch
-        android:id="@+id/switch2"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:text="Interrupteur  "
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="92dp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Plafonnier"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="174dp" />
-
-    <Switch
-        android:id="@+id/switch3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Interrupteur  "
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="224dp" />
-
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="329dp"
-        android:layout_height="43dp"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="292dp" />
+        tools:layout_editor_absoluteY="42dp" />
 
     <View
         android:id="@+id/view"
@@ -52,12 +20,68 @@
         tools:layout_editor_absoluteX="689dp"
         tools:layout_editor_absoluteY="0dp" />
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="123dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="T1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="82dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="123dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="T1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="82dp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="122dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="T2"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="121dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="T3"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="190dp" />
+
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Intensitée"
+        android:text="Vos configurations"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="259dp" />
+        tools:layout_editor_absoluteY="255dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Définir configuration par défaut"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="299dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:text="Espace Administrateur"
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="43dp" />
 
 </android.support.constraint.ConstraintLayout>

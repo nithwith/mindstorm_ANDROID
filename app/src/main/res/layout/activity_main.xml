@@ -12,7 +12,15 @@
         android:layout_height="wrap_content"
         android:text="Connexion"
         tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="187dp" />
+        tools:layout_editor_absoluteY="171dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connexion"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="171dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -21,4 +29,30 @@
         android:text="Bienvenue dans votre espace de gestion de lumière"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="31dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connexion panneau d'administration"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="345dp" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="password"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="432dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mot de passe "
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="412dp" />
 </android.support.constraint.ConstraintLayout>

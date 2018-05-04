@@ -60,4 +60,12 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="259dp" />
 
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Espace Utilisateur"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="60dp" />
+
 </android.support.constraint.ConstraintLayout>
