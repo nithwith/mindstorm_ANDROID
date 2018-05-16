@@ -68,14 +68,6 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="255dp" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Définir configuration par défaut"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="299dp" />
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -83,5 +75,49 @@
         android:text="Espace Administrateur"
         tools:layout_editor_absoluteX="218dp"
         tools:layout_editor_absoluteY="43dp" />
+
+    <GridView
+        android:layout_width="368dp"
+        android:layout_height="184dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="282dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="29dp"
+        android:layout_height="28dp"
+        tools:layout_editor_absoluteX="321dp"
+        tools:layout_editor_absoluteY="299dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        tools:layout_editor_absoluteX="321dp"
+        tools:layout_editor_absoluteY="356dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="321dp"
+        tools:layout_editor_absoluteY="420dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter config"
+        tools:layout_editor_absoluteX="238dp"
+        tools:layout_editor_absoluteY="463dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Définir temporalités"
+        tools:layout_editor_absoluteX="195dp"
+        tools:layout_editor_absoluteY="197dp" />
 
 </android.support.constraint.ConstraintLayout>
