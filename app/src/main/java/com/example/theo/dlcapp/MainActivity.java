@@ -17,6 +17,16 @@ public class MainActivity extends AppCompatActivity {
         button_connexion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //connect to nxt
+
+                String test = new String();
+
+                Connector connector = new Connector();
+                connector.connectToNXT();
+                connector.readMessage(test);
+
+                System.out.println(test);
+
                 //navigate to other activity
                 Intent intent = new Intent(MainActivity.this, UserActivity.class);
                 startActivity(intent);
