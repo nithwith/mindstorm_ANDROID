@@ -7,14 +7,6 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="353dp"
-        android:layout_height="48dp"
-        android:text="Bienvenue dans votre espace de gestion de lumière"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="31dp" />
-
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -27,7 +19,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Connexion"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="277dp" />
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="123dp" />
+
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="182dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="60dp"></LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

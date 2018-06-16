@@ -19,13 +19,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //connect to nxt
 
-                String test = new String();
-
                 Connector connector = new Connector();
                 connector.connectToNXT();
-                connector.readMessage(test);
 
-                System.out.println(test);
+                //connector.readMessage(test);
+
+                connector.write("BIM");
 
                 //navigate to other activity
                 Intent intent = new Intent(MainActivity.this, UserActivity.class);

@@ -42,7 +42,10 @@ public class Connector {
 
         //ADRESSE NXT A DEFINIR
 
-        String addr = "00:16:53:07:AA:F6";
+        enableBT();
+
+        String addr = "00:16:53:0A:AC:62";
+
 
         BluetoothDevice nxt = localAdapter.getRemoteDevice(addr);
         // Try to connect to the nxt
@@ -61,25 +64,39 @@ public class Connector {
         return success;
     }
 
+    public void write(String input) {
+        byte[] msgBuffer = input.getBytes();           //converts entered String into bytes
+        try {
 
-    public void writeMessage(byte msg) throws InterruptedException {
+
+            OutputStreamWriter mmOutStream = new OutputStreamWriter(socket_nxt.getOutputStream());
+
+            OutputStream outputStream = socket_nxt.getOutputStream();
+
+            outputStream.write(input.getBytes());
+        } catch (IOException e) {
+
+        }
+    }
+
+
+    public void writeMessage(String msg) throws InterruptedException {
         BluetoothSocket connSock;
-
 
         connSock = socket_nxt;
 
-        try {
+        byte m = 1;
 
+        try {
             OutputStreamWriter out = new OutputStreamWriter(connSock.getOutputStream());
-            out.write(msg);
+            out.write(m);
             out.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
             Thread.sleep(1000);
 
-        } catch (IOException e) {
-            // TODO: Auto-generated catch block
-            e.printStackTrace();
-        }
 
     }
 
@@ -92,9 +109,22 @@ public class Connector {
         if (connSock!=null) {
             try {
 
-                InputStreamReader in = new InputStreamReader(connSock.getInputStream());
-                n = in.read();
-                return n;
+                int size = 40;
+
+                InputStreamReader inputStream = new InputStreamReader(connSock.getInputStream());
+
+                char[] sizeOfIncomingData = new char[size];
+                inputStream.read(sizeOfIncomingData, 0, size);
+
+
+                String message = String.valueOf(sizeOfIncomingData);
+
+                System.out.println(message);
+                return 1;
+                //InputStreamReader in = new InputStreamReader(connSock.getInputStream());
+
+                //n = in.read();
+                //return n;
 
             } catch (IOException e) {
                 // TODO: Auto-generated catch block
@@ -105,5 +135,13 @@ public class Connector {
             // Error
             return -1;
         }
+    }
+
+
+
+
+    private int getIntFromByteArray(byte[] bytes)
+    {
+        return (bytes[0] & 0xFF) << 24 | (bytes[1] & 0xFF) << 16 | (bytes[2] & 0xFF) << 8 | (bytes[3] & 0xFF);
     }
 }
