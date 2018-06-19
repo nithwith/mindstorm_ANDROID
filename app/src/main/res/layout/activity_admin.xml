@@ -5,14 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="116dp"
-        android:layout_height="27dp"
-        android:text="Vos temporalités"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="42dp" />
-
     <View
         android:id="@+id/view"
         android:layout_width="wrap_content"
@@ -20,104 +12,121 @@
         tools:layout_editor_absoluteX="689dp"
         tools:layout_editor_absoluteY="0dp" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="123dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="number"
-        android:text="T1"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="82dp" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="123dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="number"
-        android:text="T1"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="82dp" />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="122dp"
-        android:layout_height="44dp"
-        android:ems="10"
-        android:inputType="number"
-        android:text="T2"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="135dp" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="121dp"
-        android:layout_height="43dp"
-        android:ems="10"
-        android:inputType="number"
-        android:text="T3"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="190dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Vos configurations"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="255dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="18dp"
-        android:text="Espace Administrateur"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="43dp" />
-
-    <GridView
-        android:layout_width="368dp"
-        android:layout_height="184dp"
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="26dp"
+        android:orientation="horizontal"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="282dp" />
+        tools:layout_editor_absoluteY="8dp">
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="29dp"
-        android:layout_height="28dp"
-        tools:layout_editor_absoluteX="321dp"
-        tools:layout_editor_absoluteY="299dp" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_weight="1"
+            android:text="Espace Administrateur"
+            tools:layout_editor_absoluteX="134dp"
+            tools:layout_editor_absoluteY="16dp" />
+    </LinearLayout>
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        tools:layout_editor_absoluteX="321dp"
-        tools:layout_editor_absoluteY="356dp" />
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="266dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="42dp">
 
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="321dp"
-        tools:layout_editor_absoluteY="420dp" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vos temporalités" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ajouter config"
-        tools:layout_editor_absoluteX="238dp"
-        tools:layout_editor_absoluteY="463dp" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="T1" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Définir temporalités"
-        tools:layout_editor_absoluteX="195dp"
-        tools:layout_editor_absoluteY="197dp" />
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Entrer une valeur" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="T2" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Entrer une valeur" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="T3" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Entrer une valeur" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enregistrer vos temporalités" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="251dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="344dp">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Config par défaut" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Luminaire" />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plafonnier" />
+
+        <SeekBar
+            android:id="@+id/intensity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enregistrer la configuration" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -10,6 +10,7 @@ public class Admin {
     public Admin() {
         this.configs = new ArrayList<>();
         this.password ="admin";
+
     }
 
 

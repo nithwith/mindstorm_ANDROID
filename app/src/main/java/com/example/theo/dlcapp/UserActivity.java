@@ -7,15 +7,18 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.theo.dlcapp.model.*;
 
+import java.util.ArrayList;
+
 public class UserActivity extends AppCompatActivity {
 
-    Utilisateur utilisateur = new Utilisateur();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +27,16 @@ public class UserActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //Model
+        //Get Connector
+        final Connector BTconnector = MainActivity.BTconnector;
 
 
         //Activity
 
         SeekBar intensity_bar = (SeekBar) findViewById(R.id.intensity);
         final TextView intensityValue = (TextView)findViewById(R.id.intensityValue);
-        Switch interrupteur1 = (Switch) findViewById(R.id.interrupteur1);
-        Switch interrupteur2 = (Switch) findViewById(R.id.interrupteur2);
+        final Switch interrupteur1 = (Switch) findViewById(R.id.interrupteur1);
+        final Switch interrupteur2 = (Switch) findViewById(R.id.interrupteur2);
 
         intensity_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
 
@@ -41,8 +45,15 @@ public class UserActivity extends AppCompatActivity {
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
                 intensityValue.setText(String.valueOf(progress));
-                Plafonnier plafonnier = utilisateur.getPlafonnier();
-                plafonnier.setIntensity(progress);
+
+                Utilisateur utilisateur = MainActivity.utilisateur;
+
+                Configuration config = utilisateur.getConfiguration();
+                ArrayList<SimulateurLumière> list_lumiere = config.getList_lumiere();
+                SimulateurLumière lum2 = list_lumiere.get(1);
+                lum2.setIntensity(progress);
+                list_lumiere.set(1,lum2);
+
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {}
@@ -51,41 +62,48 @@ public class UserActivity extends AppCompatActivity {
         });
 
 
+        interrupteur1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-        interrupteur1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Model", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Utilisateur utilisateur = MainActivity.utilisateur;
 
-                Luminaire luminaire = utilisateur.getLuminaire();
-
-                if (luminaire.isIs_on()){
-                    luminaire.setIs_on(false);
-                }
-                else{
-                    luminaire.setIs_on(true);
+                if (isChecked) {
+                    Configuration config = utilisateur.getConfiguration();
+                    ArrayList<SimulateurLumière> list_lumiere = config.getList_lumiere();
+                    SimulateurLumière lum1 = list_lumiere.get(0);
+                    lum1.setIs_on(Boolean.TRUE);
+                    list_lumiere.set(0,lum1);
+                } else {
+                    Configuration config = utilisateur.getConfiguration();
+                    ArrayList<SimulateurLumière> list_lumiere = config.getList_lumiere();
+                    SimulateurLumière lum1 = list_lumiere.get(0);
+                    lum1.setIs_on(Boolean.FALSE);
+                    list_lumiere.set(0,lum1);
                 }
             }
         });
 
-        interrupteur2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Model", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+        interrupteur2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                Plafonnier plafonnier = utilisateur.getPlafonnier();
+                Utilisateur utilisateur = MainActivity.utilisateur;
 
-                if (plafonnier.isIs_on()){
-                    plafonnier.setIs_on(false);
+                if (isChecked) {
+                    Configuration config = utilisateur.getConfiguration();
+                    ArrayList<SimulateurLumière> list_lumiere = config.getList_lumiere();
+                    SimulateurLumière lum2 = list_lumiere.get(1);
+                    lum2.setIs_on(Boolean.TRUE);
+                    list_lumiere.set(1,lum2);
+                } else {
+                    Configuration config = utilisateur.getConfiguration();
+                    ArrayList<SimulateurLumière> list_lumiere = config.getList_lumiere();
+                    SimulateurLumière lum2 = list_lumiere.get(1);
+                    lum2.setIs_on(Boolean.FALSE);
+                    list_lumiere.set(1,lum2);
                 }
-                else{
-                    plafonnier.setIs_on(true);
-                }
-
             }
         });
+
     }
 
 

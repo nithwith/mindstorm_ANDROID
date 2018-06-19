@@ -1,27 +1,31 @@
 package com.example.theo.dlcapp.model;
 
+import java.util.ArrayList;
+
 public class Utilisateur {
-    Plafonnier plafonnier;
-    Luminaire luminaire;
+    Configuration configuration;
+
+    public Utilisateur(Configuration configuration) {
+        this.configuration = configuration;
+    }
 
     public Utilisateur() {
-        this.plafonnier = new Plafonnier();
-        this.luminaire = new Luminaire();
+
+        //Constructeur de l'utilisateur de demo
+
+        SimulateurLumière lum1 = new SimulateurLumière(1,Boolean.FALSE,0);
+        SimulateurLumière lum2 = new SimulateurLumière(1,Boolean.FALSE,50);
+        ArrayList<SimulateurLumière> list_lumiere = new ArrayList<>();
+        list_lumiere.add(lum1);
+        list_lumiere.add(lum2);
+        this.configuration = new Configuration(1,"test",0,0,0,"yes",list_lumiere);
     }
 
-    public Plafonnier getPlafonnier() {
-        return plafonnier;
+    public Configuration getConfiguration() {
+        return configuration;
     }
 
-    public Luminaire getLuminaire() {
-        return luminaire;
-    }
-
-    public void setPlafonnier(Plafonnier plafonnier) {
-        this.plafonnier = plafonnier;
-    }
-
-    public void setLuminaire(Luminaire luminaire) {
-        this.luminaire = luminaire;
+    public void setConfiguration(Configuration configuration) {
+        this.configuration = configuration;
     }
 }

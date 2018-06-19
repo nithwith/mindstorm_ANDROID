@@ -24,6 +24,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".AdminActivity"
+            android:label="Espace d'administration"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".UserActivity"
             android:label="@string/title_activity_user"
             android:theme="@style/AppTheme.NoActionBar"></activity>

@@ -20,12 +20,14 @@ import java.util.UUID;
 public class Connector {
 
     //Target NXTs for communication
-
-
-
-    BluetoothAdapter localAdapter;
-    BluetoothSocket socket_nxt;
+    public static BluetoothAdapter localAdapter;
+    public static BluetoothSocket socket_nxt;
     boolean success = false;
+
+
+
+
+
 
     // Enables Bluetooth if not enabled
     public void enableBT(){
@@ -137,6 +139,40 @@ public class Connector {
             // Error
             return -1;
         }
+    }
+
+
+    public String buildMessageLumiere(String type, int val1, int val2, int val3){
+
+        String msg = new String();
+
+
+
+        if(type.equals("setLum")){
+
+            //val1 = id_lumiere
+            //val2 = action (on = 1 / off = 0)
+            //val3 = intensity
+
+
+            msg = "/lum"
+                    +String.valueOf(val1)+";"
+                    +String.valueOf(val2)+";"
+                    +String.valueOf(val3);
+        }
+        if(type.equals("confTemp")){
+
+            //val1 = T1
+            //val2 = T2
+            //val3 = T3
+
+            msg = "/confTemp"
+                    +String.valueOf(val1)+";"
+                    +String.valueOf(val2)+";"
+                    +String.valueOf(val3);
+        }
+
+        return msg;
     }
 
 
