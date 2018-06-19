@@ -14,19 +14,49 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="20dp" />
 
-    <Button
-        android:id="@+id/connexion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Connexion"
-        tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="123dp" />
-
     <LinearLayout
         android:layout_width="395dp"
-        android:layout_height="182dp"
+        android:layout_height="587dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="60dp"></LinearLayout>
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="102dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/connexion"
+                android:layout_width="362dp"
+                android:layout_height="wrap_content"
+                android:text="connexion" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/connexion_admin"
+            android:layout_width="356dp"
+            android:layout_height="wrap_content"
+            android:text="Connexion Administrateur" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mot de passe Administrateur" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/password_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

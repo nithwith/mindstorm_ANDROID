@@ -13,6 +13,8 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import com.example.theo.dlcapp.model.*;
+
 import java.util.UUID;
 
 public class Connector {
