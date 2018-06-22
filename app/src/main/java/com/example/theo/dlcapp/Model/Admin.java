@@ -1,4 +1,6 @@
-package com.example.theo.dlcapp.model;
+package com.example.theo.dlcapp.Model;
+
+import com.example.theo.dlcapp.MainActivity;
 
 import java.util.ArrayList;
 
@@ -8,7 +10,9 @@ public class Admin {
     private String password;
 
     public Admin() {
-        this.configs = new ArrayList<>();
+        this.configs = new ArrayList<Configuration>();
+        this.configs.add(MainActivity.configuration);
+
         this.password ="admin";
 
     }

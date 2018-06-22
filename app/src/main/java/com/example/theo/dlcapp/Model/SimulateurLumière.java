@@ -1,4 +1,4 @@
-package com.example.theo.dlcapp.model;
+package com.example.theo.dlcapp.Model;
 
 public class SimulateurLumière {
     private int id;
@@ -6,10 +6,20 @@ public class SimulateurLumière {
     private Boolean is_on;
     private int intensity;
 
-    public SimulateurLumière(int id, Boolean is_on, int intensity) {
+    public SimulateurLumière(int id, Boolean is_on, int intensity, String nom) {
         this.id = id;
         this.is_on = is_on;
         this.intensity = intensity;
+        this.nom = nom;
+    }
+
+    public void inverser(){
+        if(this.is_on.equals(Boolean.TRUE)){
+            this.is_on = Boolean.FALSE;
+        }
+        else {
+            this.is_on =Boolean.TRUE;
+        }
     }
 
     public int getId() {
@@ -42,6 +52,5 @@ public class SimulateurLumière {
 
     public void setIntensity(int intensity) {
         this.intensity = intensity;
-        System.out.println(intensity);
     }
 }

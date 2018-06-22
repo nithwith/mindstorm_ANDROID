@@ -6,14 +6,9 @@ import android.bluetooth.BluetoothDevice;
 import android.util.Log;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.util.ArrayList;
-import java.util.Iterator;
-
-import com.example.theo.dlcapp.model.*;
 
 import java.util.UUID;
 
@@ -68,16 +63,14 @@ public class Connector {
         return success;
     }
 
+
     public void write(String input) {
-        byte[] msgBuffer = input.getBytes();           //converts entered String into bytes
         try {
-
-
-            OutputStreamWriter mmOutStream = new OutputStreamWriter(socket_nxt.getOutputStream());
-
             OutputStream outputStream = socket_nxt.getOutputStream();
-
-            outputStream.write(input.getBytes());
+            outputStream.write("test".getBytes());
+            //outputStream.write(12345);
+            //outputStream.write(input.getBytes());
+            outputStream.flush();
         } catch (IOException e) {
 
         }
